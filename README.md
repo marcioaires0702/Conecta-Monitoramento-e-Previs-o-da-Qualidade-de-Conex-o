@@ -1,0 +1,2 @@
+# Conecta-Monitoramento-e-Previs-o-da-Qualidade-de-Conex-o
+O Conecta+ permite monitorar a qualidade da conexão com a internet em tempo real, consultar previsões para diferentes horários e analisar métricas como latência, download e upload. Também oferece histórico de desempenho, recomendações para atividades online e recursos de acessibilidade, facilitando a compreensão e o planejamento do uso da rede.
