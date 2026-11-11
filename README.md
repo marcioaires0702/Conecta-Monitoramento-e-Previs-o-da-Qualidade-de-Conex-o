@@ -42,8 +42,7 @@ Demonstração das telas
 
 Tela de Previsão e Tela de Atividades:
 
-<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/8538b60c-6bcf-4f59-951e-b40946e86a35" />
-<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/62157ff2-bf73-4f06-b01f-b837628a23a3" />
+<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/8538b60c-6bcf-4f59-951e-b40946e86a35" /> <img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/62157ff2-bf73-4f06-b01f-b837628a23a3" />
 
 🔌 3. Integração com a API
 
