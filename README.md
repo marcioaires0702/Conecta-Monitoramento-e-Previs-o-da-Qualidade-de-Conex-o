@@ -4,66 +4,304 @@ Projeto Interdisciplinar — Centro Universitário Braz Cubas — Semestre 2026/
 Integração Curricular: Programação para Dispositivos Móveis • Análise e Projeto de Sistemas II • Redes de Computadores
 Docentes Responsáveis: Profa. Aline dos Santos, Prof. Davi de Oliveira Cruz e Profa. Denise Braito
 
-📝 Visão Geral do Aplicativo
+📝 1. Visão Geral do Projeto
 
-O Conecta+ é um aplicativo móvel desenvolvido com o objetivo de facilitar o monitoramento da qualidade da conexão com a internet, permitindo que usuários acompanhem o desempenho da rede e consultem previsões sobre sua estabilidade em diferentes horários.
+O Conecta+ é um aplicativo móvel desenvolvido com o objetivo de facilitar o acompanhamento da qualidade da conexão com a internet, permitindo que os usuários consultem informações sobre o desempenho da rede e obtenham previsões de estabilidade para diferentes horários do dia.
 
-A aplicação apresenta uma interface intuitiva e acessível, transformando informações técnicas de conectividade em indicadores visuais de fácil compreensão, classificados em três níveis: Boa, Regular e Instável.
+A aplicação utiliza uma interface intuitiva e acessível, transformando informações técnicas de conectividade em indicadores visuais de fácil compreensão, classificados em três níveis: Boa, Regular e Instável.
 
-Para obter e processar as informações necessárias ao funcionamento do sistema, utilizamos a API disponibilizada pela professora, integrando seus dados à aplicação para alimentar as funcionalidades de monitoramento e consulta. A partir dessas informações, o aplicativo apresenta métricas como latência, velocidade de download e upload, além de disponibilizar previsões de qualidade da conexão para horários e períodos específicos.
+Para o funcionamento das funcionalidades de previsão, utilizamos a Internet Quality API, disponibilizada para o desenvolvimento do projeto e hospedada na plataforma Render. A comunicação acontece por meio de requisições HTTP, permitindo consultar modelos preditivos, previsões por localização e informações sobre a qualidade da conexão.
 
-O projeto busca atender principalmente estudantes, profissionais em regime de teletrabalho e usuários que dependem de uma conexão estável para realizar atividades online, como videoconferências, streaming, jogos, navegação e transferência de arquivos.
+O aplicativo foi desenvolvido utilizando React Native e Expo, proporcionando compatibilidade com dispositivos móveis e permitindo sua execução por meio do Expo Go.
 
-A proposta também está alinhada ao ODS 9 (Indústria, Inovação e Infraestrutura) da ONU, incentivando o acesso à informação tecnológica e contribuindo para uma utilização mais consciente e eficiente dos recursos de conectividade.
+O projeto tem como público principal estudantes, profissionais que trabalham remotamente e pessoas que dependem de uma conexão estável para realizar atividades como videoconferências, streaming, jogos online, navegação e transferência de arquivos.
 
-⚙️ Funcionalidades e Recursos do Sistema
+A proposta está alinhada ao ODS 9 (Indústria, Inovação e Infraestrutura) da ONU, incentivando o acesso à informação tecnológica e contribuindo para uma utilização mais consciente dos recursos de conectividade.
 
-O Conecta+ foi estruturado em nove telas principais, organizadas para oferecer uma experiência completa de acompanhamento da qualidade da internet:
+⚙️ 2. Funcionalidades da Interface Mobile
 
-Monitoramento da Conexão Atual: Apresenta a condição atual da conexão, exibindo seu nível de qualidade, latência, velocidade de download e upload, permitindo que o usuário compreenda rapidamente o desempenho da rede.
+O aplicativo foi organizado em nove telas principais, cada uma desenvolvida para facilitar a consulta e a compreensão das informações disponibilizadas pelo sistema.
 
-Previsão da Qualidade da Conexão: Permite consultar a qualidade estimada da internet em horários específicos ou em determinados períodos do dia, facilitando o planejamento de atividades que dependem de uma boa conexão.
+Tela Inicial (Home): Apresenta uma visão geral da conexão, mostrando sua classificação atual e informações como latência, velocidade de download e upload. Também disponibiliza um resumo das previsões para os próximos horários.
 
-Detalhamento das Previsões: Exibe informações técnicas associadas a cada previsão, incluindo latência, download e upload, além de recomendações sobre quais atividades podem ser realizadas com maior ou menor estabilidade.
+Seleção de Horário e Período: Permite que o usuário escolha um horário específico ou um período do dia para consultar a qualidade prevista da conexão, facilitando o planejamento de atividades online.
 
-Análise por Tipo de Atividade: Avalia a adequação da conexão para diferentes atividades digitais, como videoconferências, streaming, jogos online, navegação e envio de arquivos, apresentando uma classificação individual para cada uma.
+Detalhes da Previsão: Exibe informações detalhadas sobre a qualidade estimada da rede, incluindo latência, download e upload, além de recomendações sobre as atividades que podem ser realizadas naquele horário.
 
-Histórico de Conectividade: Disponibiliza um gráfico com o comportamento da qualidade da conexão ao longo dos últimos dias, acompanhado de um resumo percentual dos períodos classificados como bons, regulares ou instáveis.
+Previsão por Atividade: Permite verificar a adequação da conexão para diferentes atividades, como videoconferências, streaming, jogos online, navegação e envio de arquivos, apresentando uma classificação individual para cada uma.
 
-Configurações do Aplicativo: Reúne opções de personalização, notificações, acessibilidade e informações gerais sobre o funcionamento do sistema.
+Histórico de Conexão: Apresenta um gráfico com o comportamento da qualidade da rede ao longo dos últimos dias, acompanhado de indicadores percentuais dos períodos classificados como bons, regulares e instáveis.
 
-Recursos de Acessibilidade: Oferece ajustes de tamanho da fonte, alto contraste, leitor de tela, navegação simplificada, descrição de ícones e linguagem simples, buscando tornar o aplicativo acessível a diferentes perfis de usuários.
+Configurações: Reúne as opções de personalização do aplicativo e permite acessar os recursos de notificações, acessibilidade e informações sobre o sistema.
 
-Glossário e Ajuda: Apresenta explicações simplificadas sobre conceitos técnicos de redes, como latência, jitter e perda de pacotes, facilitando a compreensão das informações apresentadas.
+Acessibilidade: Disponibiliza recursos como ajuste de tamanho da fonte, alto contraste, leitor de tela, navegação simplificada, descrição de ícones e linguagem simples.
 
-🖧 Fundamentos de Redes de Computadores e Integração com API
+Glossário e Ajuda: Apresenta explicações simplificadas sobre conceitos técnicos de redes, como latência, jitter e perda de pacotes, facilitando a compreensão dos indicadores apresentados.
 
-O funcionamento do Conecta+ está relacionado a conceitos fundamentais de redes de computadores, utilizando informações de conectividade para avaliar a qualidade da comunicação entre dispositivos e serviços online.
+Demonstração das telas
 
-Integração com API: Utilizamos a API disponibilizada pela professora como parte fundamental da comunicação entre a aplicação e a fonte de dados. Essa integração permite trabalhar com informações de rede e disponibilizá-las de maneira organizada nas diferentes telas do aplicativo.
+Tela de Previsão e Tela de Atividades:
 
-Latência (RTT — Round Trip Time): Representa o tempo necessário para que os dados sejam enviados até um destino e retornem à origem, sendo expressa em milissegundos (ms). É uma métrica importante para avaliar a qualidade de chamadas de vídeo, jogos online e outras atividades que exigem respostas rápidas.
+<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/8538b60c-6bcf-4f59-951e-b40946e86a35" />
+<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/62157ff2-bf73-4f06-b01f-b837628a23a3" />
 
-Velocidade de Download: Indica a taxa de recebimento de dados pela conexão, sendo fundamental para atividades como assistir a vídeos, baixar arquivos e acessar conteúdos online.
+🔌 3. Integração com a API
 
-Velocidade de Upload: Representa a taxa de envio de dados pela rede, influenciando diretamente atividades como videoconferências, transmissões ao vivo e compartilhamento de arquivos.
+O Conecta+ utiliza a Internet Quality API, hospedada na plataforma Render, como fonte de informações para as funcionalidades de previsão da qualidade da conexão.
 
-Jitter (Variação da Latência): Representa a variação do tempo de chegada dos pacotes de dados. Valores elevados podem prejudicar a sincronização de áudio e vídeo durante comunicações em tempo real.
+A integração é realizada por meio de uma camada de serviços responsável pela comunicação com a API REST, utilizando requisições HTTP para consultar e enviar informações.
 
-Perda de Pacotes: Indica a porcentagem de pacotes de dados que não chegam corretamente ao destino, podendo provocar interrupções, lentidão e instabilidade em diferentes serviços.
+Endereço principal da API:
 
-📈 Classificação da Qualidade e Experiência do Usuário
+https://internet-quality-api.onrender.com/api/v1
 
-Um dos principais diferenciais do Conecta+ é a transformação de métricas técnicas em informações práticas, permitindo que mesmo usuários sem conhecimentos avançados em tecnologia compreendam as condições da própria conexão.
+Endpoints utilizados
 
-Para isso, o sistema utiliza três classificações visuais:
+Método
 
-Boa: Representa uma conexão com condições favoráveis de utilização, adequada para atividades que exigem maior estabilidade e desempenho.
+Endpoint
 
-Regular: Indica possíveis limitações ou oscilações na rede, podendo afetar determinadas atividades dependendo de suas exigências.
+Finalidade
 
-Instável: Representa uma conexão com problemas de qualidade que podem comprometer significativamente a navegação, chamadas, jogos e outras atividades online.
+GET
 
-Essa classificação permite relacionar os indicadores técnicos de QoS (Quality of Service) com a QoE (Quality of Experience), ou seja, transformar dados sobre o desempenho da rede em informações que ajudam o usuário a entender como sua experiência poderá ser afetada.
+/models
 
-Dessa forma, o Conecta+ não se limita a apresentar números e velocidades: sua proposta é oferecer uma visão mais clara sobre a qualidade da conexão, permitindo que o usuário identifique os melhores momentos para realizar suas atividades digitais.
+Consulta os modelos preditivos disponíveis (A, B, C e D).
+
+GET
+
+/forecasts/nearby
+
+Consulta a previsão utilizando a sonda mais próxima por geolocalização.
+
+GET
+
+/forecasts/probes/{id}/timeline
+
+Obtém a previsão horária da sonda para um período de 24 horas.
+
+POST
+
+/activity/check
+
+Verifica a adequação da conexão para atividades e horários específicos.
+
+GET
+
+/health
+
+Consulta a integridade e disponibilidade do servidor.
+
+GET
+
+/locations
+
+Consulta a lista de sondas públicas cadastradas.
+
+Os cinco primeiros endpoints indicados como consumidos fazem parte da integração descrita no contrato da API. O endpoint /locations está mapeado, mas sua utilização efetiva não está confirmada na documentação disponível.
+
+Funcionamento da integração
+
+A aplicação permite selecionar um modelo preditivo e um ponto de referência, consultar previsões de conectividade e apresentar os resultados de maneira organizada nas telas do aplicativo.
+
+Quando a URL da API está configurada, o sistema utiliza os dados retornados pelo serviço. Caso contrário, funciona em modo demonstração, utilizando informações de exemplo previamente definidas no projeto, identificadas na interface como dados demonstrativos.
+
+Em caso de falha na comunicação com a API, o aplicativo apresenta mensagens de erro compreensíveis, sem substituir silenciosamente os resultados por informações fictícias.
+
+🖧 4. Conceitos de Redes de Computadores
+
+O projeto utiliza conceitos fundamentais de redes de computadores para apresentar informações sobre o desempenho e a estabilidade da conexão.
+
+Latência (RTT): Representa o tempo necessário para que os dados sejam enviados até um destino e retornem à origem, sendo expressa em milissegundos (ms).
+
+Perda de Pacotes: Indica a porcentagem de pacotes de dados que não chegam corretamente ao destino, podendo provocar interrupções e instabilidade na comunicação.
+
+Jitter: Representa a variação do tempo de chegada dos pacotes de dados, podendo prejudicar a sincronização de áudio e vídeo em comunicações em tempo real.
+
+Download: Representa a velocidade de recebimento de dados pela conexão.
+
+Upload: Representa a velocidade de envio de dados pela conexão.
+
+Qualidade de Serviço e Experiência do Usuário
+
+O sistema relaciona os conceitos de QoS (Quality of Service) e QoE (Quality of Experience), transformando informações técnicas sobre a rede em classificações compreensíveis para o usuário.
+
+A qualidade é apresentada em três categorias:
+
+Boa: Conexão com condições favoráveis de utilização.
+
+Regular: Conexão que pode apresentar limitações ou oscilações.
+
+Instável: Conexão que pode comprometer determinadas atividades online.
+
+Dessa maneira, o aplicativo ajuda o usuário a compreender as condições previstas da rede antes de realizar atividades que dependem de estabilidade.
+
+♿ 5. Acessibilidade e Experiência do Usuário
+
+O desenvolvimento do Conecta+ considera a acessibilidade como parte importante da experiência de utilização.
+
+Entre os recursos disponíveis estão:
+
+Ajuste do tamanho da fonte.
+
+Opção de alto contraste.
+
+Compatibilidade com leitor de tela.
+
+Navegação simplificada.
+
+Descrição de ícones.
+
+Linguagem simples para explicações técnicas.
+
+Identificação dos estados da conexão por textos e ícones, não dependendo exclusivamente das cores.
+
+O aplicativo também apresenta mensagens amigáveis em situações de falha na comunicação com o servidor, permitindo que o usuário compreenda o problema e tente novamente.
+
+🛠️ 6. Tecnologias Utilizadas
+
+Front-end — Aplicativo Mobile
+
+React Native: Framework utilizado para desenvolver a interface e as funcionalidades do aplicativo móvel.
+
+Expo: Plataforma utilizada para facilitar o desenvolvimento, execução e testes do aplicativo.
+
+TypeScript: Linguagem utilizada para adicionar tipagem estática e melhorar a organização e segurança do código.
+
+Expo Router: Responsável pela organização das telas e navegação entre as funcionalidades.
+
+JavaScript: Utilizado no ecossistema e nos serviços de integração.
+
+Feather Icons (@expo/vector-icons): Biblioteca de ícones utilizada na interface.
+
+React Native SVG: Utilizado para a construção de elementos gráficos, incluindo representações do histórico de conexão.
+
+AsyncStorage: Responsável pelo armazenamento local de preferências e configurações do usuário.
+
+Back-end e Integração
+
+FastAPI / Python: Tecnologia utilizada na Internet Quality API hospedada na nuvem.
+
+API REST: Padrão de comunicação utilizado para realizar as consultas e enviar informações entre o aplicativo e o servidor.
+
+Render: Plataforma de hospedagem da API.
+
+Tecnologias Complementares
+
+Java 17: Utilizado no projeto complementar de back-end da disciplina de Análise e Projeto de Sistemas II.
+
+Spring Boot 3.4.0: Framework utilizado na estruturação da aplicação Java.
+
+JUnit 5: Ferramenta utilizada para testes automatizados.
+
+JaCoCo: Ferramenta utilizada para análise da cobertura dos testes.
+
+🚀 7. Como Executar o Projeto
+
+Para executar o Conecta+, é necessário ter o Node.js instalado no computador e o aplicativo Expo Go no celular, caso queira testar diretamente em um dispositivo móvel.
+
+Pré-requisitos
+
+Node.js 20 ou superior.
+
+npm.
+
+Expo Go instalado no Android ou iOS.
+
+Computador e celular conectados à mesma rede Wi-Fi, quando utilizado o modo de conexão local.
+
+Passo a passo para execução
+
+1. Instalação das dependências
+
+Abra o terminal na pasta principal do projeto e execute:
+
+npm install
+
+Esse comando instala todas as bibliotecas necessárias para o funcionamento do aplicativo.
+
+2. Configuração da API
+
+Configure a variável de ambiente EXPO_PUBLIC_API_URL no arquivo .env, utilizando o endereço:
+
+EXPO_PUBLIC_API_URL=https://internet-quality-api.onrender.com/api/v1
+
+Essa configuração permite que o aplicativo utilize a API real. Sem ela, o sistema inicia em modo demonstração, com dados de exemplo.
+
+3. Inicialização do aplicativo
+
+Execute o comando:
+
+npx expo start -c
+
+O Expo iniciará o servidor de desenvolvimento e disponibilizará um QR Code no terminal.
+
+4. Acesso pelo celular
+
+Instale e abra o aplicativo Expo Go.
+
+Escaneie o QR Code apresentado no terminal.
+
+Aguarde o carregamento do aplicativo no dispositivo.
+
+5. Execução pelo navegador (opcional)
+
+Para executar o aplicativo no navegador, utilize:
+
+npx expo start --web
+
+Testes e verificações
+
+O projeto também disponibiliza comandos para verificar seu funcionamento:
+
+npm test
+
+Executa os testes automatizados utilizando Jest.
+
+npm run typecheck
+
+Verifica os tipos e a integridade do código TypeScript.
+
+📁 8. Estrutura do Projeto
+
+A aplicação está organizada em diretórios responsáveis por separar as funcionalidades e facilitar a manutenção do código.
+
+conecta-mais/
+├── app/
+│   └── Telas e rotas do aplicativo
+│
+├── src/
+│   ├── domain/       # Regras de qualidade e atividades
+│   ├── services/     # Comunicação com a API
+│   ├── state/        # Estados e preferências
+│   ├── components/   # Componentes da interface
+│   └── theme/        # Cores e estilos
+│
+├── assets/           # Imagens e recursos visuais
+├── app.json          # Configurações do Expo
+├── package.json      # Dependências e scripts
+├── tsconfig.json     # Configurações TypeScript
+└── README.md         # Documentação do projeto
+
+👥 9. Integrantes do Grupo
+
+Grupo — Projeto Conecta+
+
+Abraão Amorim Diogenes — RGM: 43410243
+
+Igor Augusto Maciel da Rocha — RGM: 42704545
+
+Kevin William Paulino da Costa — RGM: 42923077
+
+Lucas Paulino de Paula Santos — RGM: 42770131
+
+Marcio Aires da Costa Nunes Filho — RGM: 43715770
+
+🎯 10. Considerações Finais
+
+O desenvolvimento do Conecta+ possibilitou a aplicação prática dos conhecimentos adquiridos nas disciplinas de Programação para Dispositivos Móveis, Análise e Projeto de Sistemas II e Redes de Computadores.
+
+Por meio da integração com uma API externa, da utilização de tecnologias modernas e da construção de uma interface acessível, o projeto busca simplificar o acompanhamento da qualidade da conexão com a internet.
+
+A proposta é oferecer ao usuário informações organizadas e previsões que auxiliem no planejamento de suas atividades digitais, tornando os conceitos de redes mais compreensíveis e aproximando a tecnologia das necessidades do cotidiano.
